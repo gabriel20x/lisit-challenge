@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {getCategoryList} from "../../api/getCategoryList";
 import {IPeople, IPlanets, IStarShips, Person, Planet, StarShip} from "../../types";
@@ -59,6 +59,10 @@ const Category = () => {
     setPage(prevState => --prevState )
   }
 
+  const getCategoryItemId = (url:string) => {
+    return url.split('/').splice(-2).shift()
+  }
+
   return (
     <div className={'flex flex-col gap-4 items-center'}>
       <h1>{category}</h1>
@@ -70,11 +74,12 @@ const Category = () => {
           )}
           <section className={'grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 relative'}>
             {
-              data.results.map((categoryItem) => {
-                if(category === 'people') return <PeopleCard person={categoryItem as Person}/>
-                if(category === 'starships') return <StartShipCard startship={categoryItem as StarShip}/>
-                if(category === 'planets') return <PlanetCard planet={categoryItem as Planet}/>
-                return <div>{categoryItem.name}</div>
+              data.results.map((categoryItem,index) => {
+                return <Link key={categoryItem.name} to={`/${category}/${getCategoryItemId(categoryItem.url)}`}>
+                  {category === 'people' && <PeopleCard person={categoryItem as Person}/>}
+                  {category === 'starships' && <StartShipCard startship={categoryItem as StarShip}/>}
+                  {category === 'planets' && <PlanetCard planet={categoryItem as Planet}/>}
+                </Link>
               })
             }
             {data.count > 10 && (
