@@ -1,16 +1,17 @@
+@import './assets/fonts/starjedi.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@layer components {
+    .landing-title{
+        @apply font-sjHollow text-7xl text-white tracking-wide leading-none
+    }
+    .mini-landing-title{
+        @apply font-sjRegular text-lg text-white tracking-wide leading-none
+    }
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    font-size: clamp(0.75rem, 0.5789rem + 0.3509vw, 1rem);
 }

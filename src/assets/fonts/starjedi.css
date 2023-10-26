@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Star Jedi Regular';
+    src: url('./Starjedi.ttf') format("opentype");
+}
+@font-face {
+    font-family: 'Star Jedi Hollow';
+    src: url('./Starjhol.ttf') format("opentype");
+}
+@font-face {
+    font-family: 'Star Jedi Outline';
+    src: url('./Starjout.ttf') format("opentype");
+}
