@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# Prueba tecnica Lisit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+La empresa Manosos SPA nos ha solicitado realizar un landing page en el cual podamos visualizar
+diferente información de Starwars que ellos han recolectado mediante su API
+(https://swapi.dev/api/).
 
-## Available Scripts
+Para ello se requiere realizar peticiones mediante axios y luego generar una visual
+desktop responsive con la información de las siguientes categorías:
 
-In the project directory, you can run:
+* Personas
+* Planetas
+* Naves
+
+El landing debe contener:
+
+* Filtro de Busqueda.
+    * Por nombre.
+    * Paginado.
+
+Por cada categoría se debe mostrar: 
+
+* Información preliminar - (Information Card)
+* Informacion detallada - (Detail View on click on Card)
+
+Adicionalmente:
+* En la categoria de Planetas, redireccionar al detalle de un residente al hacer click.
+
+Funcionalidades Añadidas: 
+* Cache de información - Debido a que los datos relacionados entre categorias deben obtenerse de manera individual, de esta manera se evita la sobrecarga de peticiones
+
+## Instrucciones para levantar el projecto en local.
+
+Se debe primero instalar las dependencias con el comando:
+
+### `npm install`
+
+Finalmente iniciar el proyecto con el comando.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
