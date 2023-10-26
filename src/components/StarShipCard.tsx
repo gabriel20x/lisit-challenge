@@ -1,7 +1,7 @@
-import {StartShip} from "../types";
+import {StarShip} from "../types";
 
 type StartShipCardProps = {
-  startship: StartShip
+  startship: StarShip
 }
 
 const StartShipCard = (props:StartShipCardProps) => {

@@ -16,7 +16,7 @@ export type IStarShips = {
   count: number,
   next: string | null,
   previous: string | null,
-  results: StartShip[]
+  results: StarShip[]
 }
 
 export type Person = {
@@ -55,7 +55,7 @@ export type Planet = {
   "url": string
 }
 
-export type StartShip = {
+export type StarShip = {
   "name": string,
   "model": string,
   "manufacturer": string,
