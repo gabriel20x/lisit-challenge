@@ -1,4 +1,6 @@
 import Api from './index'
+import {IPeople, IPlanets, IStarShips} from "../types";
+import axios from "axios";
 
 type GetCategoryListProps = {
   category: 'people' | 'starships' | 'planets',
@@ -7,8 +9,14 @@ type GetCategoryListProps = {
   search?:string
 }
 
-export const getCategoryList = (props : GetCategoryListProps)  => {
+export const getCategoryList = async (props : GetCategoryListProps)  => {
   const {category, page, directUrl, search} = props
-  if(directUrl) return Api[category]
-  return Api[category]
+  if(directUrl) {
+    const response = await axios.get<undefined, { data: IPeople | IPlanets | IStarShips }>(directUrl)
+    return response.data
+  }
+  const response = await Api.get<undefined, { data: IPeople | IPlanets | IStarShips }>(category,{params:{
+    search
+    }})
+  return response.data
 }

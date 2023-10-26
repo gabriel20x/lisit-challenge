@@ -24,7 +24,7 @@ const PeopleDetail = (props:PeopleCardProps) => {
           <div className={'flex gap-2'}>
             Peliculas:
             {person.films.map(( film, index ) => {
-              return <a href={film} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
+              return <a key={`${film}-${index}`} href={film} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
             })}
           </div>
         )}
@@ -32,7 +32,7 @@ const PeopleDetail = (props:PeopleCardProps) => {
           <div className={'flex gap-2'}>
             Especie:
             {person.species.map(( specie, index ) => {
-              return <a href={specie} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
+              return <a key={`${specie}-${index}`} href={specie} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
             })}
           </div>
         )}
@@ -40,7 +40,7 @@ const PeopleDetail = (props:PeopleCardProps) => {
           <div className={'flex gap-2'}>
             Naves:
             {person.starships.map(( starship, index ) => {
-              return <a href={starship} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
+              return <a key={`${starship}-${index}`} href={starship} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
             })}
           </div>
         )}
@@ -48,7 +48,7 @@ const PeopleDetail = (props:PeopleCardProps) => {
           <div className={'flex gap-2'}>
             vehiculos:
             {person.vehicles.map(( vehicle, index ) => {
-              return <a href={vehicle} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
+              return <a key={`${vehicle}-${index}`} href={vehicle} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
             })}
           </div>
         )}

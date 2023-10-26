@@ -1,11 +1,7 @@
-import people from './people'
-import planets from './planets'
-import starships from './starships'
+import axios from "axios";
 
-const Api =  {
-  people,
-  planets,
-  starships
-}
+const Api = axios.create({
+  baseURL: 'https://swapi.dev/api'
+})
 
 export default Api

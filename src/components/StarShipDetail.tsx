@@ -24,7 +24,7 @@ const StartShipDetail = (props:StarShipDetailProps) => {
           <div className={'flex gap-2'}>
             Peliculas:
             {startship.films.map(( film, index ) => {
-              return <a href={film} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
+              return <a key={`${film}-${index}`} href={film} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
             })}
           </div>
         )}
@@ -32,7 +32,7 @@ const StartShipDetail = (props:StarShipDetailProps) => {
           <div className={'flex gap-2'}>
             Pilotos:
             {startship.pilots.map(( pilot, index ) => {
-              return <a href={pilot} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
+              return <a key={`${pilot}-${index}`} href={pilot} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
             })}
           </div>
         )}

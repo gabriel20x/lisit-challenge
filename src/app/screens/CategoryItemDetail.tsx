@@ -20,7 +20,6 @@ const CategoryItemDetail = () => {
   const navigate = useNavigate()
 
   const getDataById = async () => {
-    console.log(!id || isNaN(parseInt(id)))
     if(!id || isNaN(parseInt(id))) return
     try {
       setLoading(true)

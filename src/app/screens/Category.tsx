@@ -22,10 +22,10 @@ const Category = () => {
   const firstItem = ((actualPage - 1) * ITEMS_BY_PAGE) + 1
   const lastItem = (actualPage * ITEMS_BY_PAGE)
 
-  const getData = async () => {
+  const getData = async (search?:string) => {
     try {
       setLoading(true)
-      const dataList = await getCategoryList({category: category as CategoryType})
+      const dataList = await getCategoryList({category: category as CategoryType, search})
       setData(dataList)
     } catch (error) {
       setError(!!error)
@@ -66,15 +66,21 @@ const Category = () => {
   return (
     <div className={'flex flex-col gap-4 items-center'}>
       <h1>{category}</h1>
-      <SearchBar/>
+      <SearchBar getCategoryByName={getData}/>
       {!isLoading && data && (
         <>
           {data.count > 10 && (
             <Paginate getNextPage={getNextPage} getPreviousPage={getPreviousPage} nextUrl={data.next} previousUrl={data.previous} actualPage={actualPage}/>
           )}
+          {data.count === 0 && (
+            <div className={'flex flex-col gap-2 py-4'}>
+              <h2>No se encontraron los datos</h2>
+              <button className={'flex items-center w-fit rounded-md justify-center bg-transparent ring-2 ring-light-space'}>Recargar categoria</button>
+            </div>
+          )}
           <section className={'grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 relative'}>
             {
-              data.results.map((categoryItem,index) => {
+              data.results?.map((categoryItem,index) => {
                 return <Link key={categoryItem.name} to={`/${category}/${getCategoryItemId(categoryItem.url)}`}>
                   {category === 'people' && <PeopleCard person={categoryItem as Person}/>}
                   {category === 'starships' && <StartShipCard startship={categoryItem as StarShip}/>}

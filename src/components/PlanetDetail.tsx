@@ -29,7 +29,7 @@ const PlanetDetail = (props:PlanetDetailProps) => {
           <div className={'flex gap-2'}>
             Residentes:
             {planet.residents.map(( resident, index ) => {
-              return <Link to={`/people/${getCategoryItemId(resident)}`} className={'text-blue-300'}> {index + 1} </Link>
+              return <Link key={`${resident}-${index}`} to={`/people/${getCategoryItemId(resident)}`} className={'text-blue-300'}> {index + 1} </Link>
             })}
           </div>
         )}
@@ -37,7 +37,7 @@ const PlanetDetail = (props:PlanetDetailProps) => {
           <div className={'flex gap-2'}>
             Peliculas:
             {planet.films.map(( film, index ) => {
-              return <a href={film} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
+              return <a key={`${film}-${index}`} href={film} className={'text-blue-300'} target={'_blank'} rel="noreferrer"> {index + 1} </a>
             })}
           </div>
         )}
