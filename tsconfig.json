@@ -20,20 +20,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "src",
-    "paths": {
-      "@starwars/components": [
-        "components/index.ts"
-      ],
-      "@starwars/api": [
-        "api/index.ts"
-      ],
-      "@starwars/utils": [
-        "utils/index.ts"
-      ],
-      "@starwars/assets": [
-        "assets"
-      ]
-    }
   },
   "exclude": ["node_modules", "tmp", "public"],
   }
