@@ -6,8 +6,8 @@ import CategoryItem from "./CategoryItem";
 const Categories = () => {
   return (
     <div className={'flex gap-6 w-full justify-around'}>
-      <CategoryItem categoryName={'Personajes'} Icon={Characters} path={'/characters'}/>
-      <CategoryItem categoryName={'Naves'} Icon={Starships} path={'/ships'}/>
+      <CategoryItem categoryName={'Personas'} Icon={Characters} path={'/people'}/>
+      <CategoryItem categoryName={'Naves'} Icon={Starships} path={'/starships'}/>
       <CategoryItem categoryName={'Planetas'} Icon={Planets} path={'/planets'}/>
     </div>
   );

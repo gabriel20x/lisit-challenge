@@ -2,7 +2,9 @@ import React from 'react';
 import MainContainer from "components/MainContainer";
 import LandingTitle from "components/LandingTitle";
 import Categories from "components/Categories";
-import HeaderContainer from "../../components/HeaderContainer";
+import HeaderContainer from "components/HeaderContainer";
+import ContentContainer from "components/ContentContainer";
+import {Outlet} from "react-router-dom";
 
 const Landing = () => {
 
@@ -12,6 +14,9 @@ const Landing = () => {
         <LandingTitle/>
         <Categories/>
       </HeaderContainer>
+      <ContentContainer>
+        <Outlet/>
+      </ContentContainer>
     </MainContainer>
   );
 };

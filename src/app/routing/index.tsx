@@ -1,5 +1,6 @@
 import {createBrowserRouter} from "react-router-dom";
 import Landing from "../screens/Landing";
+import Category from "../screens/Category";
 
 export const router = createBrowserRouter([
   {
@@ -7,27 +8,11 @@ export const router = createBrowserRouter([
     element: <Landing />,
     children: [
       {
-        path: "planets",
-        element: <Landing />,
+        path: ":category",
+        element: <Category />,
       },
       {
-        path: "planets/:id",
-        element: <Landing />,
-      },
-      {
-        path: "characters",
-        element: <Landing />,
-      },
-      {
-        path: "characters/:id",
-        element: <Landing />,
-      },
-      {
-        path: "ships",
-        element: <Landing />,
-      },
-      {
-        path: "ships/:id",
+        path: ":category/:id",
         element: <Landing />,
       },
     ]
