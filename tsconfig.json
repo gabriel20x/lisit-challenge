@@ -24,9 +24,6 @@
       "@starwars/components": [
         "components/index.ts"
       ],
-      "@starwars/navigation": [
-        "navigation/index.ts"
-      ],
       "@starwars/api": [
         "api/index.ts"
       ],
