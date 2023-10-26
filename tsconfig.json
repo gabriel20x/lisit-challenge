@@ -18,9 +18,25 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      "@starwars/components": [
+        "components/index.ts"
+      ],
+      "@starwars/navigation": [
+        "navigation/index.ts"
+      ],
+      "@starwars/api": [
+        "api/index.ts"
+      ],
+      "@starwars/utils": [
+        "utils/index.ts"
+      ],
+      "@starwars/assets": [
+        "assets"
+      ]
+    }
   },
-  "include": [
-    "src"
-  ]
-}
+  "exclude": ["node_modules", "tmp", "public"],
+  }
