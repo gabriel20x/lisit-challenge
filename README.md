@@ -25,8 +25,8 @@ Por cada categoría se debe mostrar:
 Adicionalmente:
 * En la categoria de Planetas, redireccionar al detalle de un residente al hacer click.
 
-Funcionalidades Añadidas: 
-* Cache de información - Debido a que los datos relacionados entre categorias deben obtenerse de manera individual, de esta manera se evita la sobrecarga de peticiones
+Funcionalidades que se tenian pensado añadir: 
+* ~~Cache de información - Debido a que los datos relacionados entre categorias deben obtenerse de manera individual, de esta manera se evita la sobrecarga de peticiones~~
 
 ## Instrucciones para levantar el projecto en local.
 
@@ -34,7 +34,10 @@ Se debe primero instalar las dependencias con el comando:
 
 ### `npm install`
 
-Finalmente iniciar el proyecto con el comando.
+Iniciar el proyecto con el comando.
 
 ### `npm start`
 
+Entrar a la url local que ha habilitado el modo desarrollo: 
+
+[localhost](http://localhost:3000)

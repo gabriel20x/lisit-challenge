@@ -16,7 +16,7 @@ const ListCategoriesItem = (props :ListCategoriesItemProps) => {
 
   return (<>
       {
-          categoryList.map((categoryItem, index) => {
+          categoryList.map((categoryItem) => {
           return (
             <Link key={categoryItem.name} to={`/${category}/${getCategoryItemId(categoryItem.url)}`}>
               {category === 'people' && <PeopleCard person={categoryItem as Person}/>}

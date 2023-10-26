@@ -10,7 +10,7 @@ type GetCategoryListProps = {
 }
 
 export const getCategoryList = async (props : GetCategoryListProps)  => {
-  const {category, page, directUrl, search} = props
+  const {category, directUrl, search} = props
   if(directUrl) {
     const response = await axios.get<undefined, { data: IPeople | IPlanets | IStarShips }>(directUrl)
     return response.data

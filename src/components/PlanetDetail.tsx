@@ -1,5 +1,6 @@
 import { Planet} from "../types";
 import {Link} from "react-router-dom";
+import {getCategoryItemId} from "../utils";
 
 type PlanetDetailProps = {
   planet: Planet
@@ -7,10 +8,6 @@ type PlanetDetailProps = {
 
 const PlanetDetail = (props:PlanetDetailProps) => {
   const {planet} = props
-
-  const getCategoryItemId = (url:string) => {
-    return url.split('/').splice(-2).shift()
-  }
 
   if(!planet) return null
 

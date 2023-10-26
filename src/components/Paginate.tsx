@@ -1,5 +1,4 @@
 import {PropsWithChildren} from "react";
-import ListCategoriesItem from "./ListCategoriesItem";
 
 type PaginateProps = {
   nextUrl: string | null
